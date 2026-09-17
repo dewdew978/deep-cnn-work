@@ -1,0 +1,11 @@
+# Large ZIP archives exceeding GitHub 100MB limit (Teacher lecture materials & archives)
+archives/
+*.zip
+teacher_materials/**/dataset/*.zip
+
+# Python & OS cache
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+Thumbs.db
