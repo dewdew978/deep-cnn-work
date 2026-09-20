@@ -1,11 +1,10 @@
 # โครงการพัฒนาแบบจำลอง CNN สำหรับการรู้จำตัวอักษรและตัวเลขภาษาไทย (72 คลาส)
 ## Thai Character Recognition using CNN, Transfer Learning & Data Augmentation
 
-โครงงานนี้นำเสนอการพัฒนาแบบจำลอง Convolutional Neural Network (CNN) สถาปัตยกรรม **ResNet-18** ร่วมกับเทคนิค **Transfer Learning**, **Data Augmentation**, **Class-Weighted Cross-Entropy Loss** และ **Resolution Optimization (64 × 64)** สำหรับจำแนกตัวอักษร สระ วรรณยุกต์ และตัวเลขภาษาไทยจำนวน **72 คลาส** (ชุดข้อมูล `round2` รวม 62,709 ภาพ) โดยออกแบบระบบให้มีความสมบูรณ์ในตัวเอง (Self-contained) 100% ไม่ต้องพึ่งพาไฟล์ JSON หรือ CSV เสริมภายนอก
-
+โครงงานนี้นำเสนอการพัฒนาแบบจำลอง Convolutional Neural Network (CNN) สถาปัตยกรรม **ResNet-18** ร่วมกับเทคนิค **Transfer Learning**, **Data Augmentation**, **Class-Weighted Cross-Entropy Loss** และ **Resolution Optimization (64 × 64)** สำหรับจำแนกตัวอักษร สระ วรรณยุกต์ และตัวเลขภาษาไทยจำนวน **72 คลาส** (ชุดข้อมูล `round2` รวม 62,709 ภาพ) 
 ---
 
-## 📊 ผลการทดลองและประสิทธิภาพแบบจำลอง (Experiment Results จาก model.pt)
+##  ผลการทดลองและประสิทธิภาพแบบจำลอง (Experiment Results จาก model.pt)
 
 แบบจำลองได้รับการฝึกสอนด้วยความละเอียดภาพที่เหมาะสมที่สุด **64 × 64 พิกเซล** บนฮาร์ดแวร์ **NVIDIA GeForce RTX 4050 Laptop GPU** (CUDA 12.4, Mixed Precision FP16) สถาปัตยกรรม **ResNet-18** (บันทึกค่าน้ำหนักที่ดีที่สุดที่ **Epoch 14**):
 
@@ -34,7 +33,7 @@
 
 ---
 
-## 📁 โครงสร้างไฟล์ในโปรเจกต์ (Project Structure)
+##  Project Structure
 
 ```text
 Deep/
@@ -51,23 +50,23 @@ Deep/
 
 ---
 
-## 🎯 สรุปการตอบโจทย์ตามเกณฑ์การให้คะแนน (Rubric Alignment)
+##  สรุปการตอบโจทย์ตามเกณฑ์การให้คะแนน 
 
-| เกณฑ์การให้คะแนน | แนวทางการดำเนินงานและเทคนิคในโครงงานนี้ | ผลการประเมิน |
-| :--- | :--- | :---: |
-| **1. ประสิทธิภาพการทำนาย (Accuracy)** | ทำ Validation Top-1 ได้ **97.87%**, Top-3 **99.94%**, Synthetic Test **89.58%** | **ผ่านเกณฑ์ระดับยอดเยี่ยม** |
-| **2. การใช้งาน Transfer Learning** | ใช้ ResNet-18 Pre-trained ImageNet ถ่ายโอน Feature Extractor ระดับลึก | **ได้คะแนนเต็ม** |
-| **3. การใช้งาน Data Augmentation** | RandomRotation (±12°), RandomAffine, ColorJitter และ White Background Padding | **ได้คะแนนเต็ม** |
-| **4. เทคนิคหรือแนวคิดที่น่าสนใจ** | 1. **Resolution Optimization (64x64):** ลดอาการเบลอของเส้นอักษร ดัน Acc Synthetic พุ่งสู่ 89.58%<br>2. **Class-Weighted Loss:** สูตร $w_c = 1/\sqrt{N_c}$ ป้องกันคลาสหายากถูกละเลย<br>3. **Zero-Dependency Native TIS-620:** ถอดรหัสตัวอักษรไทยในตัว ไม่ต้องส่งไฟล์ mapping | **ได้คะแนนเต็ม** |
-| **5. การนำเสนอและเอกสาร** | จัดทำเอกสารสรุปเนื้อหา [presentation_summary.md](presentation_summary.md) ครบทั้ง 12 หัวข้อ | **พร้อมนำเสนอ 100%** |
+| เกณฑ์การให้คะแนน | แนวทางการดำเนินงานและเทคนิคในโครงงานนี้ | 
+| :--- | :--- |
+| **1. ประสิทธิภาพการทำนาย (Accuracy)** | ทำ Validation Top-1 ได้ **97.87%**, Top-3 **99.94%**, Synthetic Test **89.58%** | 
+| **2. การใช้งาน Transfer Learning** | ใช้ ResNet-18 Pre-trained ImageNet ถ่ายโอน Feature Extractor ระดับลึก |
+| **3. การใช้งาน Data Augmentation** | RandomRotation (±12°), RandomAffine, ColorJitter และ White Background Padding |
+| **4. เทคนิคหรือแนวคิดที่น่าสนใจ** | 1. **Resolution Optimization (64x64):** ลดอาการเบลอของเส้นอักษร ดัน Acc Synthetic พุ่งสู่ 89.58%<br>2. **Class-Weighted Loss:** สูตร $w_c = 1/\sqrt{N_c}$ ป้องกันคลาสหายากถูกละเลย<br>3. **Zero-Dependency Native TIS-620:** ถอดรหัสตัวอักษรไทย | 
+| **5. การนำเสนอและเอกสาร** | [presentation_summary.md](presentation_summary.md)  |
 
 ---
 
-## 🚀 การใช้งานสมุดงาน (Notebook Workflow)
+##  Notebook Workflow
 
 ### 1. การฝึกสอนโมเดล (Training)
 เปิดไฟล์ [train.ipynb](train.ipynb) แล้วกด **Run All**:
-- สแกนโฟลเดอร์รูปภาพ `ThaiCharacter Dataset` ตรงใน 0.1 วินาที
+- สแกนโฟลเดอร์รูปภาพ `ThaiCharacter Dataset` 
 - แบ่ง Stratified Split 80% Train : 20% Val ใน RAM
 - ฝึกสอนโมเดล **ResNet-18 (64 × 64)** ด้วย Cosine Annealing Scheduler + Class-Weighted Loss
 - บันทึกโมเดลที่ดีที่สุดลงใน `model.pt`
