@@ -2,6 +2,7 @@
 archives/
 *.zip
 teacher_materials/**/dataset/*.zip
+scratch/
 
 # Python & OS cache
 __pycache__/
