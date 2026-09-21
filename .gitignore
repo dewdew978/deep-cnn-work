@@ -1,7 +1,7 @@
 # Large ZIP archives exceeding GitHub 100MB limit (Teacher lecture materials & archives)
 archives/
 *.zip
-teacher_materials/**/dataset/*.zip
+teacher_materials/
 scratch/
 
 # Python & OS cache

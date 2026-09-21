@@ -1,7 +1,0 @@
-# For example :  C:\Users\Jonh\Documents\ObjectDetection\YOLO\CarDetectionYOLO\train\images
-train: Put your absolute path for TRAINING image here WITHOUT single quotes (' ') and double quotes (" ")
-val: Put your absolute path for VALIDATED image here WITHOUT single quotes (' ') and double quotes (" ")
-test: Put your absolute path for TESTING image here WITHOUT single quotes (' ') and double quotes (" ")
-
-nc: 1  # Replace with the actual number of classes in your dataset
-names: ['car']  # Replace with the actual class names

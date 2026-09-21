@@ -1,6 +1,0 @@
-
-conda-forge::opencv
-conda-forge::matplotlib
-anaconda::pandas
-anaconda::numpy
-anaconda::scikit-learn
