@@ -29,7 +29,7 @@ flowchart LR
     E --> F["Custom Head\n(Dropout 0.2 + Linear 72)"]
     F --> G["Class-Weighted\nCross-Entropy Loss"]
     G --> H["Model Checkpoint\n(Val Acc: 97.87%)"]
-    H --> I["Inference with TTA\n(Synthetic Test Acc: 89.58%)"]
+    H --> I["Inference with TTA\n(Synthetic Test Acc: 90.05%)"]
 ```
 
 ---
@@ -175,7 +175,7 @@ train_transform = transforms.Compose([
 
 * จากการทดลองเปรียบเทียบระหว่างขนาดมาตรฐาน **224 × 224** กับ **64 × 64**
 * พบว่าการย่อ/ขยายภาพอักษรขนาดเล็ก (~20 px) ไปที่ **64 × 64 (ขยายเพียง 3 เท่า)** รักษาความคมชัดของเส้นอักษรไทยได้ดีกว่าการขยายไปที่ 224 × 224 (ขยาย 10 เท่า ซึ่งเกิดรอยเบลอจากการเกลี่ยพิกเซล)
-* **ผลลัพธ์:** ทำให้ความแม่นยำบนชุดทดสอบสังเคราะห์พุ่งสูงขึ้นจาก **83.10% ➜ 89.58% (+6.48%)**
+* **ผลลัพธ์:** ทำให้ความแม่นยำบนชุดทดสอบสังเคราะห์พุ่งสูงขึ้นจาก **83.10% ➜ 90.05% (+6.95%)**
 
 #### ข) Class-Weighted Loss Balancing
 
@@ -240,4 +240,4 @@ train_transform = transforms.Compose([
 * **Validation Loss (Best):** **0.0663**
 * **Train Accuracy (ที่ Epoch 14):** **97.91%**
 * **Train Loss (ที่ Epoch 14):** **0.0508**
-* **Synthetic Test Set Accuracy (ทดสอบกับชุดอักษรสังเคราะห์ 432 ภาพ):** **89.58% (387 / 432 ภาพ)**
+* **Synthetic Test Set Accuracy (ทดสอบกับชุดอักษรสังเคราะห์ 432 ภาพ):** **90.05% (389 / 432 ภาพ)**

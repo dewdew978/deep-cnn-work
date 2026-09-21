@@ -29,7 +29,7 @@
 > - **Validation Top-1 Accuracy: 97.87%** (สามารถระบุตัวอักษรได้ถูกต้องเป็นอันดับ 1 สูงเกือบ 98%)
 > - **Validation Top-3 Accuracy: 99.94%** (คำตอบจริงติดอยู่ใน Top-3 แทบ 100%)
 > - **Validation Loss: 0.0663** (ไม่มีปัญหา Overfitting)
-> - **Synthetic Test Set (432 ภาพ, 72 คลาส):** ทำความแม่นยำได้ **89.58% (387 / 432 ภาพ)** สูงขึ้นจาก 83.10% ในขนาด 224x224
+> - **Synthetic Test Set (432 ภาพ, 72 คลาส):** ทำความแม่นยำได้ **90.05% (389 / 432 ภาพ)** สูงขึ้นจาก 83.10% ในขนาด 224x224
 
 ---
 
@@ -54,10 +54,10 @@ Deep/
 
 | เกณฑ์การให้คะแนน | แนวทางการดำเนินงานและเทคนิคในโครงงานนี้ | 
 | :--- | :--- |
-| **1. ประสิทธิภาพการทำนาย (Accuracy)** | ทำ Validation Top-1 ได้ **97.87%**, Top-3 **99.94%**, Synthetic Test **89.58%** | 
+| **1. ประสิทธิภาพการทำนาย (Accuracy)** | ทำ Validation Top-1 ได้ **97.87%**, Top-3 **99.94%**, Synthetic Test **90.05%** | 
 | **2. การใช้งาน Transfer Learning** | ใช้ ResNet-18 Pre-trained ImageNet ถ่ายโอน Feature Extractor ระดับลึก |
 | **3. การใช้งาน Data Augmentation** | RandomRotation (±12°), RandomAffine, ColorJitter และ White Background Padding |
-| **4. เทคนิคหรือแนวคิดที่น่าสนใจ** | 1. **Resolution Optimization (64x64):** ลดอาการเบลอของเส้นอักษร ดัน Acc Synthetic พุ่งสู่ 89.58%<br>2. **Class-Weighted Loss:** สูตร $w_c = 1/\sqrt{N_c}$ ป้องกันคลาสหายากถูกละเลย<br>3. **Zero-Dependency Native TIS-620:** ถอดรหัสตัวอักษรไทย | 
+| **4. เทคนิคหรือแนวคิดที่น่าสนใจ** | 1. **Resolution Optimization (64x64):** ลดอาการเบลอของเส้นอักษร ดัน Acc Synthetic พุ่งสู่ 90.05%<br>2. **Class-Weighted Loss:** สูตร $w_c = 1/\sqrt{N_c}$ ป้องกันคลาสหายากถูกละเลย<br>3. **Zero-Dependency Native TIS-620:** ถอดรหัสตัวอักษรไทย | 
 | **5. การนำเสนอและเอกสาร** | [presentation_summary.md](presentation_summary.md)  |
 
 ---
