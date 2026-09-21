@@ -1,7 +1,8 @@
 # โครงการพัฒนาแบบจำลอง CNN สำหรับการรู้จำตัวอักษรและตัวเลขภาษาไทย (72 คลาส)
 ## Thai Character Recognition using CNN, Transfer Learning & Data Augmentation
 
-โครงงานนี้นำเสนอการพัฒนาแบบจำลอง Convolutional Neural Network (CNN) สถาปัตยกรรม **ResNet-18** ร่วมกับเทคนิค **Transfer Learning**, **Data Augmentation**, **Class-Weighted Cross-Entropy Loss** และ **Resolution Optimization (64 × 64)** สำหรับจำแนกตัวอักษร สระ วรรณยุกต์ และตัวเลขภาษาไทยจำนวน **72 คลาส** (ชุดข้อมูล `round2` รวม 62,709 ภาพ) 
+
+### โครงงานนี้นำเสนอการพัฒนาแบบจำลอง Convolutional Neural Network (CNN) สถาปัตยกรรม **ResNet-18** ร่วมกับเทคนิค **Transfer Learning**, **Data Augmentation**, **Class-Weighted Cross-Entropy Loss** และ **Resolution Optimization (64 × 64)** สำหรับจำแนกตัวอักษร สระ วรรณยุกต์ และตัวเลขภาษาไทยจำนวน **72 คลาส** (ชุดข้อมูล `round2` รวม 62,709 ภาพ) 
 ---
 
 ##  ผลการทดลองและประสิทธิภาพแบบจำลอง (Experiment Results จาก model.pt)
